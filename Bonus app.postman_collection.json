@@ -1,0 +1,65 @@
+{
+	"info": {
+		"_postman_id": "ad845d5e-0a1a-4001-b8ff-969bd66ab4ec",
+		"name": "Bonus app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10794653"
+	},
+	"item": [
+		{
+			"name": "Save Employee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"employees\":[\r\n      {\r\n         \"empName\":\"raj singh\",\r\n         \"department\":\"accounts\",\r\n         \"amount\":5000,\r\n         \"currency\":\"INR\",\r\n         \"joiningDate\":\"May-20-2022\",\r\n         \"exitDate\":\"May-20-2023\"\r\n      },\r\n      {\r\n         \"empName\":\"pratap m\",\r\n         \"department\":\"accounts\",\r\n         \"amount\":3000,\r\n         \"currency\":\"INR\",\r\n         \"joiningDate\":\"Jan-01-2021\",\r\n         \"exitDate\":\"May-20-2023\"\r\n      },\r\n      {\r\n         \"empName\":\"sushmita lal\",\r\n         \"department\":\"IT\",\r\n         \"amount\":4000,\r\n         \"currency\":\"INR\",\r\n         \"joiningDate\":\"Jan-01-2021\",\r\n         \"exitDate\":\"Dec-31-2021\"\r\n      },\r\n      {\r\n         \"empName\":\"sam\",\r\n         \"department\":\"Operations\",\r\n         \"amount\":2500,\r\n         \"currency\":\"USD\",\r\n         \"joiningDate\":\"May-20-2022\",\r\n         \"exitDate\":\"May-20-2023\"\r\n      },\r\n      {\r\n         \"empName\":\"john\",\r\n         \"department\":\"Operations\",\r\n         \"amount\":2500,\r\n         \"currency\":\"USD\",\r\n         \"joiningDate\":\"Jan-20-2023\",\r\n         \"exitDate\":\"Dec-30-2024\"\r\n      },\r\n      {\r\n         \"empName\":\"susan\",\r\n         \"department\":\"IT\",\r\n         \"amount\":700,\r\n         \"currency\":\"USD\",\r\n         \"joiningDate\":\"Jan-01-2022\",\r\n         \"exitDate\":\"Dec-31-2022\"\r\n      }\r\n   ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/tci/employee-bonus",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tci",
+						"employee-bonus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Bonus",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/tci/employee-bonus?date=May-27-2022",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tci",
+						"employee-bonus"
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "May-27-2022"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
